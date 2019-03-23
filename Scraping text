@@ -1,0 +1,1415 @@
+jakher@jakherNitro:~$ python3
+Python 3.5.2 (default, Nov 12 2018, 13:43:14) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import requests
+>>> website_url = requests.get('https://www.ibbi.gov.in/orders/nclt').text>>> from bs4 import BeautifulSoup
+>>> soup = BeautifulSoup(website_url,'lxml')
+>>> print(soup)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<link href="../../favicon.ico" rel="icon"/>
+<title>Insolvency and Bankruptcy Board of India</title>
+<link href="/css/bootstrap.css" rel="stylesheet"/>
+<link href="/css/style.css" rel="stylesheet"/>
+<link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+<link href="/css/font-awesome.css" rel="stylesheet"/>
+<link href="/css/animate.css" rel="stylesheet"/>
+<link href="/css/datepicker.css" rel="stylesheet"/>
+<script src="/js/ie-emulation-modes-warning.js"></script>
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-134072581-1"></script>
+<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-134072581-1');
+		</script>
+</head>
+<body class="noJS">
+<div class="gigwguidlines wow fadeInDown">
+<div class="container">
+<div class="row">
+<div class="col-md-5">
+<div class="leftgigw">
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/sitemap">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-7">
+<div class="rightgigw text-right">
+<ul>
+<li><a href="#middle-section" title="Skip to Main Content">Skip to Main Content </a></li>
+<li><a href="/screenreader">Screen Reader Access</a></li>
+<li>
+<div class="fontdy">
+<a href="javascript:void(0)" id="btn-decrease">A-</a>
+<a href="javascript:void(0)" id="btn-orig">A</a>
+<a href="javascript:void(0)" id="btn-increase">A+</a>
+</div>
+</li>
+<!-- <li>
+              <div class="contrastsection"><a class="highcontrast">A</a> <a class="normailcontrast">A</a></div>
+            </li> -->
+<li>
+<div class="languageselection">
+<select>
+<option>English</option>
+<!-- <option>Hindi</option> -->
+</select>
+</div>
+</li>
+<!-- <li class="search-btn"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg_sec">
+<div class="container wow fadeInUp">
+<div class="container">
+<div class="row">
+<div class="col-sm-1 top_head_logo_right">
+<a href="/"><img alt="" class="img-responsive" src="/img/emb.png"/></a>
+</div>
+<div class="col-sm-6 back-img" style="padding-left:0px;">
+<a href="/"> <h4 class="head-4 margin-top-0" style="position: relative;padding-top:20px;">भारतीय दिवाला और शोधन अक्षमता बोर्ड</h4>
+<h3 class="head-4 margin-top-0 IBBI">Insolvency and Bankruptcy Board of India</h3></a>
+</div>
+<div class="col-sm-2 col-xs-6 top_head_logo_right">
+<a href="https://www.gandhi.gov.in/" target="_blank"><img alt="" class="img-responsive pull-right" src="/img/150logo.jpg" style="margin-top: 5px;"/></a>
+</div>
+<div class="col-sm-3 col-xs-6 top_head_logo_right">
+<img alt="" class="img-responsive pull-right" src="/img/digital.png" style="margin-right: 20px;margin-top: 3px;"/> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="main_menu wow fadeInDown"> <!-- Static navbar -->
+<div class="container">
+<nav class="navbar navbar-default">
+<div>
+<div class="navbar-header">
+<button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">IBBI</a>
+</div>
+<div class="navbar-collapse collapse" id="navbar">
+<ul class="nav navbar-nav">
+<li>
+<a href="/home" style="color: #fff;
+              background: #fec717;"><i class="fa fa-home" style="font-size:17px;"></i></a>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="/about"> ABOUT US<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/about">ABOUT IBBI</a></li>
+<li><a href="/about/governing-board">IBBI GOVERNING BOARD</a></li>
+<li><a href="/about/board-meetings">BOARD MEETINGS</a></li>
+<li><a href="/uploads/structure/Organization_Chart.pdf" target="_blank">ORGANIZATIONAL STRUCTURE</a></li>
+<li><a href="/about/disciplinary-committee">DISCIPLINARY COMMITTEE</a></li>
+<li><a href="/about/advisory-committees">IBBI ADVISORY COMMITTEES</a></li>
+<li><a href="/about/technical-committee">IBBI TECHINICAL COMMITTEE</a></li>
+<li><a href="/about/senior-officers"> SENIOR OFFICERS</a></li>
+<li><a href="/about/internal-complaints-committee"> INTERNAL COMPLAINTS COMMITTEE</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="/legal-framework">LEGAL FRAMEWORK<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a class="link-medium" href="/legal-framework/act">ACT</a></li>
+<li><a class="link-medium" href="/legal-framework/rules">RULES</a></li>
+<li><a class="link-medium" href="/legal-framework/updated">REGULATIONS</a></li>
+<li><a class="link-medium" href="/legal-framework/circulars">CIRCULARS</a></li>
+<li><a class="link-medium" href="/legal-framework/notifications"> NOTIFICATIONS</a></li>
+<li><a class="link-medium" href="/legal-framework/guidelines"> GUIDELINES</a></li>
+<li><a class="link-medium" href="/legal-framework/other-authorities"> By Other Authorities</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"> SERVICE PROVIDER<b class="caret"></b></a>
+<ul class="dropdown-menu" style="text-transform: none;">
+<li><a href="/ips-register/register">INSOLVENCY PROFESSIONALS (IPs)</a></li>
+<li><a href="/service-provider/professional-agencies">INSOLVENCY PROFESSIONAL AGENCIES (IPAs)</a></li>
+<li><a href="/service-provider/information-utilities">INFORMATION UTILITIES (IUs)</a></li>
+<li><a href="/service-provider/professional-entities">INSOLVENCY PROFESSIONAL ENTITIES </a></li>
+<li><a href="/service-provider/valuer-organisations">REGISTERED VALUER ORGANISATIONS (RVOs)</a></li>
+<li><a href="/service-provider/registered-valuers">REGISTERED VALUER</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"> EXAMINATION<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/examination/limited-insolvency-examination">LIMITED INSOLVENCY EXAMINATION </a></li>
+<li><a href="/examination/valuation-examination">VALUATION EXAMINATION</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"> MEDIA<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a class="link-medium" href="/media/press-releases">PRESS RELEASES</a></li>
+<li><a class="link-medium" href="/media/media-coverage">MEDIA COVERAGE</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">EVENTS <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a class="link-medium" href="/events">PAST EVENTS</a></li>
+<li><a class="link-medium" href="/events/upcoming-events"> UPCOMING EVENTS</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">RESOURCES <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a class="link-medium" href="/resources/speeches">SPEECHES</a></li>
+<li><a class="link-medium" href="/resources/reports">REPORTS</a></li>
+<li><a class="link-medium" href="/resources/interviews">INTERVIEWS</a></li>
+<li><a class="link-medium" href="/resources/articles">ARTICLES</a></li>
+<li><a class="link-medium" href="/resources/videos"> VIDEOs</a></li>
+<li><a class="link-medium" href="/resources/ipa-rvo"> IPA/RVO</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<ul class="dropdown-menu" style="right:0px;left:auto !important">
+<li><a class="link-medium" href="#" target="_blank">NICCO CORPORATION LTD - PUBLIC NOTICE OF COMMENCEMENT OF CORPORATE INSOLVENCY RESOLUTION PROCESS </a></li>
+<li><a class="link-medium" href="#" target="_blank">INNOVENTIVE INDUSTRIES LTD - PUBLIC NOTICE OF COMMENCEMENT OF CORPORATE INSOLVENCY RESOLUTION PROCESS </a></li>
+<li><a class="link-medium" href="#" target="_blank">SYNERGY DOORAY AUTOMOTIVE LTD - PUBLIC NOTICE OF COMMENCEMENT OF CORPORATE INSOLVENCY RESOLUTION PROCESS </a></li>
+</ul>
+</li>
+<li><a href="/publication">PUBLICATION</a></li>
+<li class="dropdown">
+<a href="/orders">ORDERS</a>
+</li>
+<li><a href="/public-comments">PUBLIC COMMENTS</a></li>
+<li><a href="/contact-us">CONTACT US</a></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div><!--/.container-fluid -->
+</nav>
+</div>
+</div>
+<div class="inner_banner_section">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="brdesm">
+<h2>
+<div id="block-ibbi-page-title">
+<span property="schema:name">ORDERS</span>
+</div>
+</h2>
+<div>
+<div id="block-breadcrumbs-2">
+<ul>
+<li><a href="/home">Home</a></li>
+<li>NCLT</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="middle-section" id="middle-section">
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<div class="sidebar_inner">
+<div>
+<nav aria-labelledby="block-mainnavigation-3-menu" id="block-mainnavigation-3" role="navigation">
+<h2 id="block-mainnavigation-3-menu">ORDERS</h2>
+<ul class="menu">
+<li class="menu-item">
+<a href="/orders/supreme-court">SUPREME COURT</a>
+</li>
+<li class="menu-item">
+<a href="/orders/high-courts">HIGH COURTs</a>
+</li>
+<li class="menu-item">
+<a href="/orders/nclat">NCLAT</a>
+</li>
+<li class="menu-item">
+<a class="is-active" href="/orders/nclt">NCLT</a>
+</li>
+<li class="menu-item">
+<a href="/orders/drat">DRAT</a>
+</li>
+<li class="menu-item">
+<a href="/orders/drts">DRTs</a>
+</li>
+<li class="menu-item">
+<a href="/orders/ibbi">IBBI</a>
+</li>
+<li class="menu-item">
+<a href="/orders/ipa-rvo">IPA/RVO</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="col-md-9">
+<div class="content_inner">
+<div id="block-ibbi-content">
+<div class="views-element-container">
+<div>
+<form accept-charset="utf8" action="/orders/nclt" class="views-exposed-form" id="myFormId" method="get"><div class="row">
+<div class="col-md-2 form-group">
+<div class="js-form-item form-item js-form-type-select">
+<label>Subject</label>
+<input class="form-text" maxlength="128" name="title" size="30" type="text" value=""/>
+</div>
+</div>
+<div class="col-md-2 form-group">
+<div class="js-form-item form-item">
+<label>Date</label>
+<input class="datepicker" name="date" type="text" value=""/>
+</div>
+</div>
+<div class="col-md-2 form-group">
+<div class="js-form-item form-item" style="color: #fff">
+<label>Adverse against</label>
+<input class="form-text" name="adverse_against" type="radio" value="ip"/> IP
+<input class="form-text" name="adverse_against" type="radio" value="other"/> OTHER
+</div>
+</div>
+<div class="col-md-2 form-group">
+<div class="js-form-item form-item js-form-type-select">
+<label>NCLT name</label>
+<select class="form-select form-control" name="nclt"><option value="">Select</option><option value="25">Principal Bench, New Delhi</option><option value="26">New Delhi Bench - II</option><option value="27">New Delhi Bench - III</option><option value="28">New Delhi Bench - IV</option><option value="29">Ahmedabad Bench</option><option value="30">Allahabad Bench</option><option value="31">Bengaluru Bench</option><option value="32">Chandigarh Bench</option><option value="33">Chennai Bench</option><option value="34">Guwahati Bench</option><option value="35">Hyderabad Bench</option><option value="36">Jaipur Bench</option><option value="37">Kolkata Bench</option><option value="38">Mumbai Bench</option><option value="39">Kochi Bench</option><option value="40">Others</option></select></div>
+</div>
+<div class="col-md-2 form-group">
+<div class="form-actions js-form-wrapper form-wrapper">
+<input class="button js-form-submit form-submit" type="submit" value="Apply"/>
+</div>
+</div>
+<div class="col-md-2 form-group resetbtn">
+<div class="form-actions js-form-wrapper form-wrapper">
+<a class="button js-form-submit form-submit" href="/orders/nclt">Reset</a>
+</div>
+</div>
+</div>
+</form>
+<table class="cols-4 responsive-enabled">
+<thead>
+<tr>
+<th style="width: 20%;">Orders Date</th>
+<th>Subject</th>
+<th>Orders Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+        18 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/18th Mar 2019 in the matter of Deepsea Developers Private Limited CP-1153-IB-2018_2019-03-20 14:02:41.pdf');">In the matter of Deepsea Developers Private Limited CP-1153-IB-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        ADMITTED      </td>
+</tr>
+<tr>
+<td>
+        15 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/15th Mar 2019 in the matter of Elevated Mercantile Pvt. Ltd. MA 606-2019 In C.P.(IB)-176(MB)-2018_2019-03-19 16:44:43.pdf');">In the matter of Elevated Mercantile Pvt. Ltd. MA 606-2019 In C.P.(IB)-176(MB)-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        LIQUIDATION      </td>
+</tr>
+<tr>
+<td>
+        15 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/15th Mar 2019 in the matter of Ashapura Minechem Limited MA 303-2019 In C.P.(IB)-4508-MB-2018_2019-03-20 13:08:51.pdf');">In the matter of Ashapura Minechem Limited MA 303-2019 In C.P.(IB)-4508-MB-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        ADMITTED      </td>
+</tr>
+<tr>
+<td>
+        14 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/14th Mar 2019 in the matter of Farmville Agrovet Ltd. I.A. No.18-2019 In C.P. (IB)-03-2018_2019-03-20 14:53:17.pdf');">In the matter of Farmville Agrovet Ltd. I.A. No.18-2019 In C.P. (IB)-03-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        LIQUIDATION      </td>
+</tr>
+<tr>
+<td>
+        14 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/14th Mar 2019 in the matter of Green Garden Private Limited MA-196-2019 In CP-710-IB-CB-2018_2019-03-20 14:14:35.pdf');">In the matter of Green Garden Private Limited MA-196-2019 In CP-710-IB-CB-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        OTHERS      </td>
+</tr>
+<tr>
+<td>
+        14 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/14th Mar 2019 in the matter of Nonstop Courier and Cargo Private Limited IBA-254-2019_2019-03-20 14:18:55.pdf');">In the matter of Nonstop Courier and Cargo Private Limited IBA-254-2019  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        DISMISSED-EXISTENCE OF DEBT      </td>
+</tr>
+<tr>
+<td>
+        14 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/14th Mar 2019 in the matter of Santha Spinning Mills Private Limited CP-1397-IB-2018_2019-03-20 14:23:43.pdf');">In the matter of Santha Spinning Mills Private Limited CP-1397-IB-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        DISMISSED-EXISTENCE OF DEBT      </td>
+</tr>
+<tr>
+<td>
+        14 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/14th Mar 2019 in the matter of AML Power and Steel Ltd. MA-193-2019 In CP-632-IB-2017_2019-03-20 14:26:19.pdf');">In the matter of AML Power and Steel Ltd. MA-193-2019 In CP-632-IB-2017  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        OTHERS      </td>
+</tr>
+<tr>
+<td>
+        13 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/13th Mar 2019 in the matter of Namdhari Food International Pvt. Ltd. C..A. - 143 &amp; 174(ND)-2018 In C.P. No. IB-189-(ND)-2017_2019-03-18 15:41:41.pdf');">In the matter of Namdhari Food International Pvt. Ltd. C..A. - 143 &amp; 174(ND)-2018 In C.P. No. IB-189-(ND)-2017c  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        LIQUIDATION      </td>
+</tr>
+<tr>
+<td>
+        13 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/13th Mar 2019 in the matter of Western India Metal Processors Ltd. C.P.(IB)-3234-MB-2018_2019-03-19 16:56:34.pdf');">In the matter of Western India Metal Processors Ltd. C.P.(IB)-3234-MB-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        ADMITTED      </td>
+</tr>
+<tr>
+<td>
+        13 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/13th Mar 2019 in the matter of Unicare Pharma Limited MA-175-2019 In CP-283-IB-CB-2018_2019-03-20 11:49:13.pdf');">In the matter of Unicare Pharma Limited MA-175-2019 In CP-283-IB-CB-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        LIQUIDATION      </td>
+</tr>
+<tr>
+<td>
+        13 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/13th Mar 2019 in the matter of Videocon Industries Limited MA 1300-2018 In C.P.(IB)-02-(MB)-2018_2019-03-20 12:59:54.pdf');">In the matter of Videocon Industries Limited MA 1300-2018 In C.P.(IB)-02-(MB)-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        OTHERS      </td>
+</tr>
+<tr>
+<td>
+        13 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/13th Mar 2019 in the matter of Lupin Telepower Private Limited CP (IB) No. 505-10-HDB-2018_2019-03-20 13:45:56.pdf');">In the matter of Lupin Telepower Private Limited CP (IB) No. 505-10-HDB-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        ADMITTED      </td>
+</tr>
+<tr>
+<td>
+        12 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Tehri Iron and Steel Casting Ltd. CA No. 98-2019 In (IB)-447-ND-2018_2019-03-18 15:36:41.pdf');">In the matter of Tehri Iron and Steel Casting Ltd. CA No. 98-2019 In (IB)-447-ND-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        OTHERS      </td>
+</tr>
+<tr>
+<td>
+        12 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Jasper Engineers Pvt. Ltd. CA No. 92-2019 In (IB)-821-ND-2018_2019-03-18 15:38:02.pdf');">In the matter of Jasper Engineers Pvt. Ltd. CA No. 92-2019 In (IB)-821-ND-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        EXTENSION      </td>
+</tr>
+<tr>
+<td>
+        12 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Subburaj Spinning Mills Private Limited MA-31-IB-2019 In CP-655-IB-2017_2019-03-18 15:52:47.pdf');">In the matter of Subburaj Spinning Mills Private Limited MA-31-IB-2019 In CP-655-IB-2017  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        RESOLUTION      </td>
+</tr>
+<tr>
+<td>
+        12 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Infinitas Energy Solutions Private Limited MA-416-2018 In CP-558-IB-2017_2019-03-18 15:55:11.pdf');">In the matter of Infinitas Energy Solutions Private Limited MA-416-2018 In CP-558-IB-2017  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        OTHERS      </td>
+</tr>
+<tr>
+<td>
+        12 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Hamsini Foundations Private Limited CP-1361-IB-2018_2019-03-18 16:24:16.pdf');">In the matter of Hamsini Foundations Private Limited CP-1361-IB-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        ADMITTED      </td>
+</tr>
+<tr>
+<td>
+        12 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Alpine Realtech Pvt. Ltd. (IB)-1221(ND)-2018_2019-03-19 12:16:18.pdf');">In the matter of Alpine Realtech Pvt. Ltd. (IB)-1221(ND)-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        ADMITTED      </td>
+</tr>
+<tr>
+<td>
+        12 Mar, 2019      </td>
+<td>
+<a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Vadali Infotech Private Limited C.P. (IB)-4463-MB-2018_2019-03-19 15:01:36.pdf');">In the matter of Vadali Infotech Private Limited C.P. (IB)-4463-MB-2018  <img src="/img/pdf.jpg" width="15"/></a>
+</td>
+<td>
+        ADMITTED      </td>
+</tr>
+</tbody>
+</table>
+<nav class="pager">
+<p>Total Records : 3146</p>
+<ul class="pagination my-2">
+<li class="prev disabled"><a href="" onclick="return false;">&lt;</a></li> <li class="active"><a href="">1</a></li><li><a href="/orders/nclt?page=2">2</a></li><li><a href="/orders/nclt?page=3">3</a></li><li><a href="/orders/nclt?page=4">4</a></li><li><a href="/orders/nclt?page=5">5</a></li><li><a href="/orders/nclt?page=6">6</a></li><li><a href="/orders/nclt?page=7">7</a></li><li><a href="/orders/nclt?page=8">8</a></li><li><a href="/orders/nclt?page=9">9</a></li> <li class="next"><a href="/orders/nclt?page=2" rel="next">&gt;</a></li> <li class="last"><a href="/orders/nclt?page=158">&gt;&gt;</a></li> </ul>
+</nav>
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'pager' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/navigation/pager.html.twig' -->
+<!-- END OUTPUT from 'core/themes/stable/templates/navigation/pager.html.twig' -->
+</div>
+<!-- END OUTPUT from 'themes/ibbi/templates/views-view.html.twig' -->
+</div>
+<!-- END OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+</div>
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<style type="text/css">
+  .views-exposed-form .js-form-item.form-item input[type="text"], .views-exposed-form .js-form-item.form-item select, .views-exposed-form .js-form-item.form-item input[type="date"] {width: 100%;}
+.views-exposed-form .js-form-item.form-item {width: 100%;display: inline-block;}
+.views-exposed-form .form-actions input[type="submit"] {width: 100%;}
+</style>
+<div class="container-fluid p-text footer" id="footer_bar"><p>Copyright © 2018 . All Rights Reserved. </p>
+<p>This is the Official Website of the Insolvency and Bankruptcy Board of India designed and developed by IBBI &amp; hosted by National Informatics Centre (NIC).</p></div>
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.scrollbar.js"></script>
+<script type="text/javascript">
+      jQuery(document).ready(function(){
+          jQuery('.scrollbar-inner').scrollbar();
+      });
+    </script>
+<script>
+    $(document).ready(function() {
+      $('#media').carousel({
+        pause: true,
+        interval: false,
+      });
+    });
+
+
+
+    //hover menu section
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+
+    $(document).ready(function(){
+      $('body').append('<div id="toTop" class="btn btn-info"><span class="glyphicon glyphicon-chevron-up"></span></div>');
+        $(window).scroll(function () {
+          if ($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();
+          } else {
+            $('#toTop').fadeOut();
+          }
+        }); 
+        $('#toTop').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+    });
+    </script>
+<script type="text/javascript">
+function newwindow1(path){
+  //alert(path);
+   // window.open(path,'','fullscreen=yes'); 
+   
+    window.open(path,'',  'width=800,height=500'); 
+   // newwindow1.close();
+    return false;
+  }
+
+  function newwindowfullscreen(path){
+  //alert(path);
+    window.open(path,'','width=1200,height=900'); 
+   
+    //window.open(path,'',  'width=800,height=500'); 
+   // newwindow1.close();
+    return false;
+  }
+</script>
+<script src="/js/lightgallery-all.min.js"></script>
+<script src="/js/functions.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/bootstrap-datepicker.js"></script>
+<script>
+      new WOW().init();
+      $(".datepicker").datepicker({
+        format: 'yyyy-mm-dd',
+      });
+    </script>
+<script type="text/javascript">
+   function resetForm(myFormId)
+   {
+       var myForm = document.getElementById(myFormId);
+
+       for (var i = 0; i < myForm.elements.length; i++)
+       {
+           if ('submit' != myForm.elements[i].type && 'reset' != myForm.elements[i].type)
+           {
+               myForm.elements[i].checked = false;
+               myForm.elements[i].value = '';
+               myForm.elements[i].selectedIndex = 0;
+           }
+       }
+   }
+
+   $('a[href="#middle-section"]').click(function(){
+    skipTo = $(this).attr('href');
+    skipTo = $(skipTo).offset().top - 10;
+    $('html, body').animate({scrollTop:skipTo}, '200');
+    return false;
+});
+// skip to content issue regarding
+$('a[href="#middle-section"]').click(function(){
+    skipContent = $(".skipContent");
+    skipContent = $(skipContent).offset().top - 10;
+    $('html, body').animate({scrollTop:skipContent}, '200');
+    return false;
+});
+
+if (location.hash){
+    setTimeout(function(){
+        $('html, body').scrollTop(0).show();
+        jump();
+    }, 100);
+}else{
+    $('html, body').show();
+}
+var jump = function(e){
+    if (e){
+        var target = $(this).attr("href").replace('/', '');
+    } else {
+        var target = location.hash;
+    }
+    $('html,body').animate({
+        scrollTop: ($(target).offset().top) - 120
+        },2000,function()
+    {
+    });
+}
+</script>
+</body>
+</html>
+>>> import re
+>>> myString = soap
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'soap' is not defined
+>>> print(soap)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'soap' is not defined
+>>> myString=soup
+>>> print(re.search("(?P<url>https?://[^\s]+)", myString).group("url"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python3.5/re.py", line 173, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or bytes-like object
+>>> type(soup)
+<class 'bs4.BeautifulSoup'>
+>>> print(website_url)
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Insolvency and Bankruptcy Board of India</title>
+    
+	<link rel="stylesheet" href="/css/bootstrap.css"/>
+	<link rel="stylesheet" href="/css/style.css"/>
+	<link rel="stylesheet" href="/css/ie10-viewport-bug-workaround.css"/>
+	<link rel="stylesheet" href="/css/font-awesome.css"/>
+	<link rel="stylesheet" href="/css/animate.css"/>
+	<link rel="stylesheet" href="/css/datepicker.css"/>
+
+    
+    
+    
+	<script src="/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134072581-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-134072581-1');
+		</script>
+
+  </head>
+
+  <body class="noJS">
+
+
+    <div class="gigwguidlines  wow fadeInDown">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="leftgigw">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/sitemap">Sitemap</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="rightgigw text-right">
+          <ul>
+            <li><a href="#middle-section" title="Skip to Main Content">Skip to Main Content </a></li>
+            <li><a href="/screenreader">Screen Reader Access</a></li>
+            <li>
+              <div class="fontdy">
+                <a id="btn-decrease" href="javascript:void(0)">A-</a>
+                <a id="btn-orig" href="javascript:void(0)">A</a>
+                <a id="btn-increase" href="javascript:void(0)">A+</a>
+              </div>
+            </li>
+            <!-- <li>
+              <div class="contrastsection"><a class="highcontrast">A</a> <a class="normailcontrast">A</a></div>
+            </li> -->
+            <li>
+              <div class="languageselection">
+                <select>
+                  <option>English</option>
+                  <!-- <option>Hindi</option> -->
+                </select>
+              </div>
+            </li>
+            <!-- <li class="search-btn"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg_sec">
+  <div class="container wow fadeInUp">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 top_head_logo_right">
+          <a href="/"><img src="/img/emb.png" class="img-responsive" alt=""/></a>
+        </div>
+        <div class="col-sm-6 back-img" style="padding-left:0px;">
+        <a href="/"> <h4 class="head-4 margin-top-0" style="position: relative;padding-top:20px;">भारतीय दिवाला और शोधन अक्षमता बोर्ड</h4>
+          <h3 class="head-4 margin-top-0 IBBI">Insolvency and Bankruptcy Board of India</h3></a>
+        </div>
+        <div class="col-sm-2 col-xs-6 top_head_logo_right">
+          <a href="https://www.gandhi.gov.in/" target="_blank"><img src="/img/150logo.jpg" class="img-responsive pull-right" style="margin-top: 5px;" alt=""/></a>
+        </div>
+        <div class="col-sm-3 col-xs-6 top_head_logo_right">
+          <img src="/img/digital.png" class="img-responsive pull-right" style="margin-right: 20px;margin-top: 3px;" alt=""/>        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main_menu wow fadeInDown">  <!-- Static navbar -->
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">IBBI</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="/home" style="color: #fff;
+              background: #fec717;"><i class="fa fa-home" style="font-size:17px;"></i></a>
+            </li>
+            <li class="dropdown">
+              <a href="/about" class="dropdown-toggle" data-toggle="dropdown"> ABOUT US<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/about">ABOUT IBBI</a></li>
+                <li><a href="/about/governing-board">IBBI GOVERNING BOARD</a></li>
+                <li><a href="/about/board-meetings">BOARD MEETINGS</a></li>
+                <li><a href="/uploads/structure/Organization_Chart.pdf" target="_blank">ORGANIZATIONAL STRUCTURE</a></li>
+                <li><a href="/about/disciplinary-committee">DISCIPLINARY COMMITTEE</a></li>        
+                <li><a href="/about/advisory-committees">IBBI ADVISORY COMMITTEES</a></li>
+                <li><a href="/about/technical-committee">IBBI TECHINICAL COMMITTEE</a></li>
+                <li><a href="/about/senior-officers"> SENIOR OFFICERS</a></li>
+                <li><a href="/about/internal-complaints-committee"> INTERNAL COMPLAINTS COMMITTEE</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="/legal-framework" class="dropdown-toggle" data-toggle="dropdown">LEGAL FRAMEWORK<b class="caret"></b></a>
+
+              <ul class="dropdown-menu">
+               <li><a href="/legal-framework/act" class="link-medium">ACT</a></li>
+               <li><a href="/legal-framework/rules" class="link-medium">RULES</a></li>
+               <li><a href="/legal-framework/updated" class="link-medium">REGULATIONS</a></li>
+               <li><a href="/legal-framework/circulars" class="link-medium">CIRCULARS</a></li>
+               <li><a href="/legal-framework/notifications" class="link-medium"> NOTIFICATIONS</a></li>
+               <li><a href="/legal-framework/guidelines" class="link-medium"> GUIDELINES</a></li>
+               <li><a href="/legal-framework/other-authorities" class="link-medium"> By Other Authorities</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> SERVICE PROVIDER<b class="caret"></b></a>
+              <ul class="dropdown-menu" style="text-transform: none;">        
+                <li><a href="/ips-register/register">INSOLVENCY PROFESSIONALS (IPs)</a></li>
+                <li><a href="/service-provider/professional-agencies">INSOLVENCY PROFESSIONAL AGENCIES (IPAs)</a></li>
+                <li><a href="/service-provider/information-utilities">INFORMATION UTILITIES (IUs)</a></li>
+                <li><a href="/service-provider/professional-entities">INSOLVENCY PROFESSIONAL ENTITIES </a></li>
+                <li><a href="/service-provider/valuer-organisations">REGISTERED VALUER ORGANISATIONS (RVOs)</a></li>
+                <li><a href="/service-provider/registered-valuers">REGISTERED VALUER</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> EXAMINATION<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/examination/limited-insolvency-examination">LIMITED INSOLVENCY EXAMINATION </a></li>
+                <li><a href="/examination/valuation-examination">VALUATION EXAMINATION</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> MEDIA<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/media/press-releases" class="link-medium">PRESS RELEASES</a></li>
+                <li><a href="/media/media-coverage" class="link-medium">MEDIA COVERAGE</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">EVENTS <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/events" class="link-medium">PAST EVENTS</a></li>
+                  <li><a href="/events/upcoming-events" class="link-medium"> UPCOMING EVENTS</a></li>
+                </ul>
+            </li>
+  
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">RESOURCES <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+               <li><a href="/resources/speeches" class="link-medium">SPEECHES</a></li>
+               <li><a href="/resources/reports" class="link-medium">REPORTS</a></li>
+               <li><a href="/resources/interviews" class="link-medium">INTERVIEWS</a></li>
+               <li><a href="/resources/articles" class="link-medium">ARTICLES</a></li>
+               <li><a href="/resources/videos" class="link-medium"> VIDEOs</a></li>
+               <li><a href="/resources/ipa-rvo" class="link-medium"> IPA/RVO</a></li>
+              </ul>
+            </li>
+    
+    
+            <li class="dropdown">
+              <ul class="dropdown-menu" style="right:0px;left:auto !important">
+              <li><a href="#" target="_blank" class="link-medium">NICCO CORPORATION LTD - PUBLIC NOTICE OF COMMENCEMENT OF CORPORATE INSOLVENCY RESOLUTION PROCESS </a></li>
+              <li><a href="#" class="link-medium" target="_blank">INNOVENTIVE INDUSTRIES LTD - PUBLIC NOTICE OF COMMENCEMENT OF CORPORATE INSOLVENCY RESOLUTION PROCESS </a></li>       
+                  <li><a href="#" class="link-medium" target="_blank">SYNERGY DOORAY AUTOMOTIVE LTD - PUBLIC NOTICE OF COMMENCEMENT OF CORPORATE INSOLVENCY RESOLUTION PROCESS </a></li>
+              </ul>
+            </li>
+            <li><a href="/publication">PUBLICATION</a></li>    
+            <li class="dropdown">
+              <a href="/orders">ORDERS</a>
+            </li>
+            <li><a href="/public-comments">PUBLIC COMMENTS</a></li> 
+            <li><a href="/contact-us">CONTACT US</a></li>
+  
+          </ul>
+            
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+  </div>
+</div>
+
+
+      <div class="inner_banner_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="brdesm">
+          <h2>
+            <div id="block-ibbi-page-title">
+              <span property="schema:name">ORDERS</span>
+            </div>
+          </h2>
+          <div>
+            <div id="block-breadcrumbs-2">
+              <ul>
+                <li><a href="/home">Home</a></li>
+                <li>NCLT</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="middle-section" id="middle-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="sidebar_inner">
+          <div>
+            <nav role="navigation" aria-labelledby="block-mainnavigation-3-menu" id="block-mainnavigation-3">
+              <h2 id="block-mainnavigation-3-menu">ORDERS</h2>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="/orders/supreme-court">SUPREME COURT</a>
+                </li>
+                <li class="menu-item">
+                  <a href="/orders/high-courts">HIGH COURTs</a>
+                </li>
+                <li class="menu-item">
+                  <a href="/orders/nclat">NCLAT</a>
+                </li>
+                <li class="menu-item">
+                  <a href="/orders/nclt" class="is-active">NCLT</a>
+                </li>
+                <li class="menu-item">
+                  <a href="/orders/drat">DRAT</a>
+                </li>
+                <li class="menu-item">
+                  <a href="/orders/drts">DRTs</a>
+                </li>
+                <li class="menu-item">
+                  <a href="/orders/ibbi">IBBI</a>
+                </li>
+                <li class="menu-item">
+                  <a href="/orders/ipa-rvo">IPA/RVO</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-9">
+<div class="content_inner">
+<div id="block-ibbi-content">
+
+<div class="views-element-container">
+<div>
+  
+
+<form method="get" accept-charset="utf8" class="views-exposed-form" id="myFormId" action="/orders/nclt"><div class="row">
+  <div class="col-md-2 form-group">
+<div class="js-form-item form-item js-form-type-select">
+  <label>Subject</label>
+  <input type="text" name="title" value="" size="30" maxlength="128" class="form-text">
+</div>
+</div>
+
+<div class="col-md-2 form-group">
+<div class="js-form-item form-item">
+  <label>Date</label>
+  <input type="text" name="date" value="" class="datepicker">
+</div>
+</div>
+
+  <div class="col-md-2 form-group">
+<div class="js-form-item form-item" style="color: #fff">
+  <label>Adverse against</label>
+  <input type="radio" name="adverse_against"  value="ip" class="form-text"> IP
+<input type="radio" name="adverse_against"  value="other" class="form-text"> OTHER
+</div>
+</div>
+<div class="col-md-2 form-group">
+<div class="js-form-item form-item js-form-type-select">
+  <label>NCLT name</label>
+  <select name="nclt" class="form-select form-control"><option value="">Select</option><option value="25">Principal Bench, New Delhi</option><option value="26">New Delhi Bench - II</option><option value="27">New Delhi Bench - III</option><option value="28">New Delhi Bench - IV</option><option value="29">Ahmedabad Bench</option><option value="30">Allahabad Bench</option><option value="31">Bengaluru Bench</option><option value="32">Chandigarh Bench</option><option value="33">Chennai Bench</option><option value="34">Guwahati Bench</option><option value="35">Hyderabad Bench</option><option value="36">Jaipur Bench</option><option value="37">Kolkata Bench</option><option value="38">Mumbai Bench</option><option value="39">Kochi Bench</option><option value="40">Others</option></select></div>
+</div>
+<div class="col-md-2 form-group">
+<div class="form-actions js-form-wrapper form-wrapper">
+  <input type="submit" value="Apply" class="button js-form-submit form-submit">
+</div>
+</div>
+<div class="col-md-2 form-group resetbtn">
+<div class="form-actions js-form-wrapper form-wrapper">
+  <a href="/orders/nclt" class="button js-form-submit form-submit">Reset</a>
+</div>
+</div>
+</div>
+</form>
+  
+<table class="cols-4 responsive-enabled">
+  <thead>
+    <tr>
+     <th style="width: 20%;">Orders Date</th>
+      <th>Subject</th>
+      
+      <th>Orders Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+      <td>
+        18 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/18th Mar 2019 in the matter of Deepsea Developers Private Limited CP-1153-IB-2018_2019-03-20 14:02:41.pdf');">In the matter of Deepsea Developers Private Limited CP-1153-IB-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        ADMITTED      </td>
+    </tr>
+        <tr>
+      <td>
+        15 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/15th Mar 2019 in the matter of Elevated Mercantile Pvt. Ltd. MA 606-2019 In C.P.(IB)-176(MB)-2018_2019-03-19 16:44:43.pdf');">In the matter of Elevated Mercantile Pvt. Ltd. MA 606-2019 In C.P.(IB)-176(MB)-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        LIQUIDATION      </td>
+    </tr>
+        <tr>
+      <td>
+        15 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/15th Mar 2019 in the matter of Ashapura Minechem Limited MA 303-2019 In C.P.(IB)-4508-MB-2018_2019-03-20 13:08:51.pdf');">In the matter of Ashapura Minechem Limited MA 303-2019 In C.P.(IB)-4508-MB-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        ADMITTED      </td>
+    </tr>
+        <tr>
+      <td>
+        14 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/14th Mar 2019 in the matter of Farmville Agrovet Ltd. I.A. No.18-2019 In C.P. (IB)-03-2018_2019-03-20 14:53:17.pdf');">In the matter of Farmville Agrovet Ltd. I.A. No.18-2019 In C.P. (IB)-03-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        LIQUIDATION      </td>
+    </tr>
+        <tr>
+      <td>
+        14 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/14th Mar 2019 in the matter of Green Garden Private Limited MA-196-2019 In CP-710-IB-CB-2018_2019-03-20 14:14:35.pdf');">In the matter of Green Garden Private Limited MA-196-2019 In CP-710-IB-CB-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        OTHERS      </td>
+    </tr>
+        <tr>
+      <td>
+        14 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/14th Mar 2019 in the matter of Nonstop Courier and Cargo Private Limited IBA-254-2019_2019-03-20 14:18:55.pdf');">In the matter of Nonstop Courier and Cargo Private Limited IBA-254-2019&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        DISMISSED-EXISTENCE OF DEBT      </td>
+    </tr>
+        <tr>
+      <td>
+        14 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/14th Mar 2019 in the matter of Santha Spinning Mills Private Limited CP-1397-IB-2018_2019-03-20 14:23:43.pdf');">In the matter of Santha Spinning Mills Private Limited CP-1397-IB-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        DISMISSED-EXISTENCE OF DEBT      </td>
+    </tr>
+        <tr>
+      <td>
+        14 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/14th Mar 2019 in the matter of AML Power and Steel Ltd. MA-193-2019 In CP-632-IB-2017_2019-03-20 14:26:19.pdf');">In the matter of AML Power and Steel Ltd. MA-193-2019 In CP-632-IB-2017&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        OTHERS      </td>
+    </tr>
+        <tr>
+      <td>
+        13 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/13th Mar 2019 in the matter of Namdhari Food International Pvt. Ltd. C..A. - 143 &amp; 174(ND)-2018 In C.P. No. IB-189-(ND)-2017_2019-03-18 15:41:41.pdf');">In the matter of Namdhari Food International Pvt. Ltd. C..A. - 143 & 174(ND)-2018 In C.P. No. IB-189-(ND)-2017c&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        LIQUIDATION      </td>
+    </tr>
+        <tr>
+      <td>
+        13 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/13th Mar 2019 in the matter of Western India Metal Processors Ltd. C.P.(IB)-3234-MB-2018_2019-03-19 16:56:34.pdf');">In the matter of Western India Metal Processors Ltd. C.P.(IB)-3234-MB-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        ADMITTED      </td>
+    </tr>
+        <tr>
+      <td>
+        13 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/13th Mar 2019 in the matter of Unicare Pharma Limited MA-175-2019 In CP-283-IB-CB-2018_2019-03-20 11:49:13.pdf');">In the matter of Unicare Pharma Limited MA-175-2019 In CP-283-IB-CB-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        LIQUIDATION      </td>
+    </tr>
+        <tr>
+      <td>
+        13 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/13th Mar 2019 in the matter of Videocon Industries Limited MA 1300-2018 In C.P.(IB)-02-(MB)-2018_2019-03-20 12:59:54.pdf');">In the matter of Videocon Industries Limited MA 1300-2018 In C.P.(IB)-02-(MB)-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        OTHERS      </td>
+    </tr>
+        <tr>
+      <td>
+        13 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/13th Mar 2019 in the matter of Lupin Telepower Private Limited CP (IB) No. 505-10-HDB-2018_2019-03-20 13:45:56.pdf');">In the matter of Lupin Telepower Private Limited CP (IB) No. 505-10-HDB-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        ADMITTED      </td>
+    </tr>
+        <tr>
+      <td>
+        12 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Tehri Iron and Steel Casting Ltd. CA No. 98-2019 In (IB)-447-ND-2018_2019-03-18 15:36:41.pdf');">In the matter of Tehri Iron and Steel Casting Ltd. CA No. 98-2019 In (IB)-447-ND-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        OTHERS      </td>
+    </tr>
+        <tr>
+      <td>
+        12 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Jasper Engineers Pvt. Ltd. CA No. 92-2019 In (IB)-821-ND-2018_2019-03-18 15:38:02.pdf');">In the matter of Jasper Engineers Pvt. Ltd. CA No. 92-2019 In (IB)-821-ND-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        EXTENSION      </td>
+    </tr>
+        <tr>
+      <td>
+        12 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Subburaj Spinning Mills Private Limited MA-31-IB-2019 In CP-655-IB-2017_2019-03-18 15:52:47.pdf');">In the matter of Subburaj Spinning Mills Private Limited MA-31-IB-2019 In CP-655-IB-2017&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        RESOLUTION      </td>
+    </tr>
+        <tr>
+      <td>
+        12 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Infinitas Energy Solutions Private Limited MA-416-2018 In CP-558-IB-2017_2019-03-18 15:55:11.pdf');">In the matter of Infinitas Energy Solutions Private Limited MA-416-2018 In CP-558-IB-2017&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        OTHERS      </td>
+    </tr>
+        <tr>
+      <td>
+        12 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Hamsini Foundations Private Limited CP-1361-IB-2018_2019-03-18 16:24:16.pdf');">In the matter of Hamsini Foundations Private Limited CP-1361-IB-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        ADMITTED      </td>
+    </tr>
+        <tr>
+      <td>
+        12 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Alpine Realtech Pvt. Ltd. (IB)-1221(ND)-2018_2019-03-19 12:16:18.pdf');">In the matter of Alpine Realtech Pvt. Ltd. (IB)-1221(ND)-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        ADMITTED      </td>
+    </tr>
+        <tr>
+      <td>
+        12 Mar, 2019      </td>
+      <td>
+         <a href="javascript:void(0)" onclick="javascript:newwindow1('https://ibbi.gov.in//webadmin/pdf/order/2019/Mar/12th Mar 2019 in the matter of Vadali Infotech Private Limited C.P. (IB)-4463-MB-2018_2019-03-19 15:01:36.pdf');">In the matter of Vadali Infotech Private Limited C.P. (IB)-4463-MB-2018&nbsp; <img src="/img/pdf.jpg" width="15"></a>
+      </td>
+      
+      <td>
+        ADMITTED      </td>
+    </tr>
+          </tbody>
+</table>
+<nav class="pager">
+            <p>Total Records : 3146</p>
+    <ul class="pagination my-2">
+                <li class="prev disabled"><a href="" onclick="return false;">&lt;</a></li>        <li class="active"><a href="">1</a></li><li><a href="/orders/nclt?page=2">2</a></li><li><a href="/orders/nclt?page=3">3</a></li><li><a href="/orders/nclt?page=4">4</a></li><li><a href="/orders/nclt?page=5">5</a></li><li><a href="/orders/nclt?page=6">6</a></li><li><a href="/orders/nclt?page=7">7</a></li><li><a href="/orders/nclt?page=8">8</a></li><li><a href="/orders/nclt?page=9">9</a></li>        <li class="next"><a rel="next" href="/orders/nclt?page=2">&gt;</a></li>        <li class="last"><a href="/orders/nclt?page=158">&gt;&gt;</a></li>    </ul>
+</nav>
+  
+  
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'pager' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/navigation/pager.html.twig' -->
+
+<!-- END OUTPUT from 'core/themes/stable/templates/navigation/pager.html.twig' -->
+
+
+
+  
+  
+
+  
+  
+</div>
+
+<!-- END OUTPUT from 'themes/ibbi/templates/views-view.html.twig' -->
+
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<style type="text/css">
+  .views-exposed-form .js-form-item.form-item input[type="text"], .views-exposed-form .js-form-item.form-item select, .views-exposed-form .js-form-item.form-item input[type="date"] {width: 100%;}
+.views-exposed-form .js-form-item.form-item {width: 100%;display: inline-block;}
+.views-exposed-form .form-actions input[type="submit"] {width: 100%;}
+</style>
+
+    <div class="container-fluid p-text footer" id="footer_bar"><p>Copyright © 2018 . All Rights Reserved. </p>
+<p>This is the Official Website of the Insolvency and Bankruptcy Board of India designed and developed by IBBI &amp; hosted by National Informatics Centre (NIC).</p></div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery.scrollbar.js"></script>
+        
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+          jQuery('.scrollbar-inner').scrollbar();
+      });
+    </script>
+    <script>
+    $(document).ready(function() {
+      $('#media').carousel({
+        pause: true,
+        interval: false,
+      });
+    });
+
+
+
+    //hover menu section
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+
+    $(document).ready(function(){
+      $('body').append('<div id="toTop" class="btn btn-info"><span class="glyphicon glyphicon-chevron-up"></span></div>');
+        $(window).scroll(function () {
+          if ($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();
+          } else {
+            $('#toTop').fadeOut();
+          }
+        }); 
+        $('#toTop').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+    });
+    </script>
+    <script type='text/javascript'>
+function newwindow1(path){
+  //alert(path);
+   // window.open(path,'','fullscreen=yes'); 
+   
+    window.open(path,'',  'width=800,height=500'); 
+   // newwindow1.close();
+    return false;
+  }
+
+  function newwindowfullscreen(path){
+  //alert(path);
+    window.open(path,'','width=1200,height=900'); 
+   
+    //window.open(path,'',  'width=800,height=500'); 
+   // newwindow1.close();
+    return false;
+  }
+</script>
+    
+	<script src="/js/lightgallery-all.min.js"></script>
+	<script src="/js/functions.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="/js/wow.min.js"></script>
+	<script src="/js/bootstrap-datepicker.js"></script>
+    <script>
+      new WOW().init();
+      $(".datepicker").datepicker({
+        format: 'yyyy-mm-dd',
+      });
+    </script>
+      <script type="text/javascript">
+   function resetForm(myFormId)
+   {
+       var myForm = document.getElementById(myFormId);
+
+       for (var i = 0; i < myForm.elements.length; i++)
+       {
+           if ('submit' != myForm.elements[i].type && 'reset' != myForm.elements[i].type)
+           {
+               myForm.elements[i].checked = false;
+               myForm.elements[i].value = '';
+               myForm.elements[i].selectedIndex = 0;
+           }
+       }
+   }
+
+   $('a[href="#middle-section"]').click(function(){
+    skipTo = $(this).attr('href');
+    skipTo = $(skipTo).offset().top - 10;
+    $('html, body').animate({scrollTop:skipTo}, '200');
+    return false;
+});
+// skip to content issue regarding
+$('a[href="#middle-section"]').click(function(){
+    skipContent = $(".skipContent");
+    skipContent = $(skipContent).offset().top - 10;
+    $('html, body').animate({scrollTop:skipContent}, '200');
+    return false;
+});
+
+if (location.hash){
+    setTimeout(function(){
+        $('html, body').scrollTop(0).show();
+        jump();
+    }, 100);
+}else{
+    $('html, body').show();
+}
+var jump = function(e){
+    if (e){
+        var target = $(this).attr("href").replace('/', '');
+    } else {
+        var target = location.hash;
+    }
+    $('html,body').animate({
+        scrollTop: ($(target).offset().top) - 120
+        },2000,function()
+    {
+    });
+}
+</script>
+  </body>
+</html>
